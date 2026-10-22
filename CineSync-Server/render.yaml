@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cinesync-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MASTER_SECRET
+        sync: false
+      - key: NODE_VERSION
+        value: 18
